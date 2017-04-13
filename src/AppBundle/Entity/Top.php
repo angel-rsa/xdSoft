@@ -43,6 +43,13 @@ class Top
     private $items;
 
     /**
+     * Дата изменения записи
+     * @var \DateTime
+     * @ORM\Column(name="updated_at", type="date")
+     */
+    private $updatedAt;
+
+    /**
      * Get id
      *
      * @return integer
