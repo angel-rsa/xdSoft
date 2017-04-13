@@ -1,0 +1,48 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Table(name="top_items")
+ * @ORM\Entity(repositoryClass="Doctrine\ORM\EntityRepository")
+ */
+class Top
+{
+    /**
+     * @var integer
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     * @ORM\Column(name="top_date", type="date")
+     */
+    private $date;
+
+    /**
+     * @var string
+     * @ORM\Column(name="title", type="string")
+     */
+    private $title;
+
+    /**
+     * @ORM\OneToMany(targetEntity="TopItem", mappedBy="top", cascade={"all"}, orphanRemoval=true)
+     * @ORM\OrderBy({"position" = "ASC"})
+     */
+    private $items;
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
