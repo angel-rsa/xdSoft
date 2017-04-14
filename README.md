@@ -30,6 +30,7 @@
 Консольная команда парсинга:
 
 - php app/console parse:kinopoisk
+
 или
 - php app/console parse:kinopoisk YYYY-MM-DD (для парсинга конкретной даты)
 
