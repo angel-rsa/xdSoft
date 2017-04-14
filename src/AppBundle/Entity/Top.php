@@ -9,7 +9,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * Топ рейтинга за определенный день
  *
- * @ORM\Table(name="top_items")
+ * @ORM\Table(name="top")
  * @ORM\Entity(repositoryClass="Doctrine\ORM\EntityRepository")
  */
 class Top

@@ -27,6 +27,13 @@ class TopItem
     private $top;
 
     /**
+     * Позиция в рейтинге
+     * @var int
+     * @ORM\Column(type="integer")
+     */
+    private $position;
+
+    /**
      * Название фильма
      * @var string
      * @ORM\Column(type="string")
@@ -36,35 +43,28 @@ class TopItem
     /**
      * Оригинальное название фильма
      * @var string
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      */
     private $originalName;
 
     /**
-     * Позиция в рейтинге
-     * @var int
-     * @ORM\Column(type="integer")
-     */
-    private $position;
-
-    /**
      * Значение рейтинга
      * @var float
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float", nullable=true)
      */
     private $rating;
 
     /**
      * Кол-во проголосовавших
      * @var int
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $voters;
 
     /**
      * Год выхода фильма
      * @var int
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $year;
 
