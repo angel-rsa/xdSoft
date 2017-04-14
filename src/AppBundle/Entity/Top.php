@@ -154,6 +154,17 @@ class Top
     }
 
     /**
+     * Get number of items
+     *
+     * @param int $n
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getNumberOfItems($n)
+    {
+        return $this->items->slice(0, $n);
+    }
+
+    /**
      * Set createdAt
      *
      * @param \DateTime $createdAt

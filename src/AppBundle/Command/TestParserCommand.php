@@ -82,7 +82,7 @@ class TestParserCommand extends ContainerAwareCommand
     }
 
     /**
-     * Парсинг позиции топа
+     * Парсинг одной позиции топа
      * @param Crawler $node
      * @return array
      */
