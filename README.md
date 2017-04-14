@@ -23,14 +23,18 @@
 При установке проекта необходимо настроить доступ к БД и memcache в файле app/config/parameters.yml
 
 БД создается по стандартным симфониевским канонам:
+
 php app/console doctrine:database:create
+
 php app/console doctrine:schema:update --force
 
 Консольная команда парсинга:
-php app/console parse:kinopoisk
-или
-php app/console parse:kinopoisk YYYY-MM-DD
-(для парсинга конкретной даты)
 
-Экран отображения ТОП-10 на дату является стартовым экраном
+php app/console parse:kinopoisk
+
+или
+
+php app/console parse:kinopoisk YYYY-MM-DD (для парсинга конкретной даты)
+
+Экран отображения ТОП-10 на дату является стартовым экраном.
 При использовании веб-сервера из пакета симфони (php app/console server:run) открывается запросом http://127.0.0.1:8000/
