@@ -33,7 +33,7 @@ class DefaultController extends Controller
                 'top' => $top,
             ]);
 
-            $memcached->set($cacheName, $result, 6);
+            $memcached->set($cacheName, $result, 60);
         }
 
         return $result;
